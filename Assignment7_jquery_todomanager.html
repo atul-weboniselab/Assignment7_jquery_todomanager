@@ -1,0 +1,82 @@
+
+<html>
+
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function()
+
+		 {
+
+   		  $("#addc").click(function()
+
+				  {
+   		  			$("#addc").hide();
+    		  			$("#text").show();
+    		  			$("#submit").show();	
+  		 		  }
+
+		 		  );
+
+
+		  $("#submit").click(function()
+
+				    {
+            
+         				$("#submit").hide();
+         				$("#text").hide();										  			
+          		 		$("#addc").show();
+					var items=$("input:text").val();
+					$("#list").append('<li><a>' + items + '</a></li>'); 
+				    }
+
+				    )	
+
+		
+         
+
+		 }
+
+		 );
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+
+<h2>To Do Manager</h2>
+
+<p></p>
+
+<input type="button" value="Add Class" id=addc style="width: 90px; height: 20px;"  >
+
+<p> </p>
+
+<input type="text"  name="Text" id=text style="height: 25px; width: 150px;  display:none" >
+
+<p> </p>
+
+<input type="button" value="Submit" id=submit style="width: 90px; height: 20px; display:none" >
+
+<p> </p>
+
+<h3 align = left > Class Names </h3> 
+
+<div id= id1 align = left >
+
+                
+<ol id=list></ol>
+
+</div>
+
+
+</center>
+
+</body>
+</html>
